@@ -10,8 +10,6 @@ char keys[ROWS][COLS] = {
 };
 
 
-//byte rowPins[ROWS] = {7, 6, 5, 4}; //connect to the row pinouts of the keypad
-//byte colPins[COLS] = {3, 2, 1, 0}; //connect to the column pinouts of the keypad
 byte rowPins[ROWS] = {0, 1, 2, 3}; //connect to the row pinouts of the keypad
 byte colPins[COLS] = {4, 5, 6, 7}; //connect to the column pinouts of the keypad
 //byte rowPins[ROWS] = {22, 24, 26, 28}; //connect to the row pinouts of the keypad

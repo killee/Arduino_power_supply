@@ -4,13 +4,14 @@
 #include "EEPROMAnything.h"
 #include <Keypad.h>
 #include <PWM.h>
-//#include <keypad.h>
 
 
 /*Todo:   
-          Ester Egg einbauen
           Ein schönes VI in LabView basteln
-          Noch mal gscheit kalibrieren. Ev. eine Funktion einbauen! Noch sind nur 75% belegt! So schlecht ist es aber nicht!
+          Serielle Ausgabe verbessern!
+          Noch mal gscheit kalibrieren. Da müsste noch ein bissl etwas gehen!
+          Ev. eine Kalibrier Funktion einbauen! Noch sind nur 75% belegt!
+          Im Standby Spannung und Strom Sollwerte runterfahren
 
 Fixed:
           Auflösung der PWM verbessern
@@ -27,11 +28,10 @@ Fixed:
           Beim Strom ist genug rauschen da. Da sollte es eine Verbesserung bringen. Der ist aber eh nicht so der Bruller...
           Spannung ist recht gut
           Mit der erhöten PWM-Auflösung noch mal schauen
-
 */
+
 #define CURRENT_SET 10
 #define VOLTAGE_SET 9
-//#define CURRENT_SET 12   //Bei Mega
 
 #define VOLTAGE A0
 #define CURRENT A1
@@ -39,12 +39,10 @@ Fixed:
 #define STANDBY_RELAIS2 A3
 #define DISPLAY_POWER   A4
 
-
 #define BEEPER 11
 #define BEEP 125
 
 #define PWM_FREQUENCY 480
-
 #define CURR_CAL 97
 
 float set_voltage = 0;
@@ -113,16 +111,15 @@ void write_analog_signals(void) {
     if (set_current >= 2.549) {
       digitalWrite(CURRENT_SET, HIGH);
     } else {
-      pwmWriteHR(CURRENT_SET, (int)(set_current * (25600+750))-120); //26350 25600
+      pwmWriteHR(CURRENT_SET, (int)(set_current * (25600+750))-120); 
     }
 }
 
 void reade_analog_signals(void) {
   analogReference(DEFAULT);
   int analog = readADC12bit(VOLTAGE);
-  if (analog < 4092 / 2) {        //Leonardo: /2
-    analogReference(INTERNAL);  //Leonardo: INTERNAL MEGA: INTERNAL1V1
-    //Serial.print("switch internal");
+  if (analog < 4092 / 2) {       
+    analogReference(INTERNAL);  
     analog = readADC12bit(VOLTAGE);
     analog = readADC12bit(VOLTAGE);
     analog = readADC12bit(VOLTAGE);
@@ -141,7 +138,6 @@ void reade_analog_signals(void) {
     analog = readADC12bit(CURRENT);
     analog = readADC12bit(CURRENT);
     analog = readADC12bit(CURRENT);
-    //int analog=readADC12bit(VOLTAGE);
     current = ((float)(analog+18) / (float)(7992+250)) * 2.55; //(float)map(readADC12bit(CURRENT), 0, 7992, 0, 25599) / (float)10000; //Leonardo müsste dann 7992 sein MEGA 18600
     analogReference(DEFAULT);
   } else {

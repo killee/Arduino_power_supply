@@ -18,9 +18,7 @@ void read_String_serial(void) {
     // if the incoming character is a newline, set a flag
     // so the main loop can do something about it:
     if (inChar == '\n') {
-      //  stringComplete = true;
       inputString = manage_input(inputString.substring(0,(inputString.length()-2)));
-      //manage_serial_input();
     }
   }
 }

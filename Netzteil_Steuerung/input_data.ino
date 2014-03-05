@@ -4,8 +4,6 @@ String manage_input(String inputString) {
   inputString.toCharArray(char1, 8);
   
   if (inputString.endsWith("V") ) {
-    //      Serial.print(value);
-    //set_voltage=inputString.toInt();
     set_voltage = abs(atof(char1));
     if (set_voltage > 25.500)
       set_voltage = 25.500;
