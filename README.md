@@ -15,6 +15,8 @@ Die Ausgabe erfolgt auf ein 4X20 Display. Dort werden Soll-, Ist Werte sowie Zus
 
 Die Eingabe erfolgt mit einer Matrix Tastatur. Werte werden direkt eingegeben und mit einer entsprechenden Taste für Spannung, Strom und Leistung direkt übernommen.
 
+Zusätzlich kann auch noch eine Leistungsbegrenzung eingestellt werden. Das habe ich gelegentlich vermisst wenn ich verschiedene LEDs verglichen habe. Jetzt kann ich einfach die max. Leistung einstellen und muss nicht mehr nachregeln.
+
 Ein Relais trennt die das Netzteil von den Klemmen um ständiges Ein- und Ausstecken zu vermeiden.
 
 Die Genauigkeit liegt bei ca. 50mV und 5mA.
