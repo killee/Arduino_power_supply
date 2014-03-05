@@ -19,7 +19,10 @@ Ein Relais trennt die das Netzteil von den Klemmen um ständiges Ein- und Ausste
 
 Die Genauigkeit liegt bei ca. 50mV und 5mA.
 
+Über die USB-Serielle Schnittstelle gibt das Netzteil schon die Infos aus und empfängt Steuerbefehle.
+
 Ich plane noch eine Ansteuerung über ein PC-Host Programm um auch vordefinierte Kurfen, Zyklen abfahren zu können. Hab mich da mal mit LabView versucht, aber bei mir ist das zu lange her und ich muss mich da wieder ganz neu ein arbeiten.
 
-Das Projekt liegt auf GitHub. Wollte mich da mal einarbeiten. Git gefällt mir bis jetzt echt gut ;-)!
+Das Projekt liegt auf GitHub ( https://github.com/killee/Arduino_power_supply ). Wollte mich da mal einarbeiten. Git gefällt mir bis jetzt echt gut ;-)!
+
 
