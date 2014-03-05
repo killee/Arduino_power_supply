@@ -25,4 +25,5 @@ Ich plane noch eine Ansteuerung über ein PC-Host Programm um auch vordefinierte
 
 Das Projekt liegt auf GitHub ( https://github.com/killee/Arduino_power_supply ). Wollte mich da mal einarbeiten. Git gefällt mir bis jetzt echt gut ;-)!
 
-
+Viele Grüße,
+Kille
