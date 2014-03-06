@@ -27,27 +27,23 @@ void print_data_serial(void) {
   static long print_millis = 0;
   if (millis() > print_millis) {
     print_millis = millis() + print_intervall;
-    Serial.println();
-    Serial.print("Voltage = " );
     Serial.print(voltage, 2);
-    Serial.print("\t\tCurrent = ");
+    Serial.println("V");
     Serial.print(current, 3);
-    Serial.print("\t\tPower = ");
-    Serial.println(power, 2);
-
-    Serial.print("Set Voltage = " );
+    Serial.println("A");
+    Serial.print(power, 2);
+    Serial.println("W");
     Serial.print(set_voltage, 2);
-    Serial.print("\tSet Current = ");
+    Serial.println("v");
     Serial.print(set_current, 3);
-    Serial.print("\tSet Power = ");
-    Serial.println(set_power, 2);
+    Serial.println("a");
+    Serial.print(set_power, 2);
+    Serial.println("w");
     if (standby)
-      Serial.println("Standby");
+      Serial.println("1S");
     else
-      Serial.println("Aktiv");
-
+      Serial.println("0S");
   }
-
 }
 
 

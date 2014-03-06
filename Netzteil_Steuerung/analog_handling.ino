@@ -57,7 +57,7 @@ void reade_analog_signals(void) {
 
 
 #define INTERNAL_UPPER_LIMIT_VOLTAGE_CALL 45
-#define INTERNAL_LOWER_LIMIT_VOLTAGE_CALL 7
+#define INTERNAL_LOWER_LIMIT_VOLTAGE_CALL 0
 
   analogReference(DEFAULT);
   int analog = readADC12bit(VOLTAGE);
@@ -80,7 +80,7 @@ void reade_analog_signals(void) {
 #define DEFAULT_LOWER_LIMIT_CURRENT_CALL 0
 
 #define INTERNAL_UPPER_LIMIT_CURRENT_CALL 250
-#define INTERNAL_LOWER_LIMIT_CURRENT_CALL 18
+#define INTERNAL_LOWER_LIMIT_CURRENT_CALL 0
 
 
   if (analog < 4095 / 2) {
