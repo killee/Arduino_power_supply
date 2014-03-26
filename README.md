@@ -27,5 +27,9 @@ Ich plane noch eine Ansteuerung über ein PC-Host Programm um auch vordefinierte
 
 Das Projekt liegt auf GitHub ( https://github.com/killee/Arduino_power_supply ). Wollte mich da mal einarbeiten. Git gefällt mir bis jetzt echt gut ;-)!
 
+Leider sind die Angaben zu dem Analog Teil unvollständig. Ich habe keine Werte mehr für die Bauteile.
+Für den Analogteil können jedoch auch andere Schaltungen benutzt werden. Hier ist ein Analog Teil beschrieben:
+http://www.mikrocontroller.net/attachment/139925/Labornetzteil.pdf
+
 Viele Grüße,
 Kille
